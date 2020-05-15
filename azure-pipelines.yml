@@ -8,11 +8,11 @@ variables:
   releaseBranchName: 'release-pipeline' #created new variable for release branch
 
   schedules:
-    - crone: '0 3 * * *'
-      displayName: "Every Day at 3 AM"
+    - cron: '0 3 * * *' 
+      displayName: 'Deploy evert day at 3 am'
       branches:
-      include:
-        - 'release-pipeline'
+        include:
+          - 'release-pipeline'
       always: false
 
 
